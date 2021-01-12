@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 
+import { getTests } from '../common/api'
 import TestCat from '../components/TestCat.js'
-
-const apiBase = axios.create({
-  baseURL: 'http://localhost:8001/api/v1/diagnostics/',
-})
-
-const getTests = () => apiBase.get('/tests')
+import ButtonAction from '../components/ButtonAction.js'
 
 function Tests() {
   const [tests, setTests] = useState([])
@@ -17,12 +12,17 @@ function Tests() {
   }, [])
 
   return (
-    <div className="App">
-      <div>Tests:</div>
+    <div className="">
+      <div className="flex justify-between">
+        <h1>Tests</h1>
+        {tests.length && <ButtonAction>Run all</ButtonAction>}
+      </div>
       <div>
-        {tests.map((test, i) => (
-          <TestCat key={i} {...test} />
-        ))}
+        {tests.length ? (
+          tests.map((test, i) => <TestCat key={i} {...test} />)
+        ) : (
+          <div>Loading...</div>
+        )}
       </div>
     </div>
   )

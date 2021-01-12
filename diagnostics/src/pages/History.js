@@ -1,5 +1,9 @@
 function History() {
-  return <div className="App">History:</div>
+  return (
+    <div className="">
+      <h1>History</h1>
+    </div>
+  )
 }
 
 export default History
