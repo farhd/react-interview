@@ -15,7 +15,7 @@ import './App.css'
 function App() {
   return (
     <Router>
-      <div className="max-w-2xl mx-auto flex p-4 items-start">
+      <div className="max-w-6xl mx-auto flex p-4 items-start">
         <nav className="px-1 border">
           <ul>
             <li className="p-1 border-b">
@@ -31,7 +31,7 @@ function App() {
           </ul>
         </nav>
 
-        <div className="px-4">
+        <div className="px-4 w-full">
           <Switch>
             <Route path="/tests">
               <Tests />

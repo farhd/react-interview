@@ -10,7 +10,7 @@ function TestCatList({ tests = [] }) {
           <tr className="">
             <th>Name</th>
             <th>Result</th>
-            <th>Date</th>
+            {/* <th>Date</th> */}
           </tr>
         </thead>
         <tbody>

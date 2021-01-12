@@ -4,13 +4,11 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-import Store from './store'
+// import Store from './store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Store state={{ tests: [] }}>
-      <App />
-    </Store>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )
